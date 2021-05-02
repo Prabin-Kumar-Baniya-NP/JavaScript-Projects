@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+            min-height: 50vh;
+        }
+        .alert{
+            display: none;
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+            margin-bottom: 15px;
+        }
+        .closebtn{
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .closebtn:hover{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            Alert Message Generated From HTML
+        </div>
+        <div>
+            <button>Click Me</button>
+        </div>
+    </div>
+    <script>
+        const btn = document.querySelector("button");
+        const alert = document.querySelector(".alert");
+        btn.addEventListener("click", function(){
+            alert.style.display = "block";
+            const paragraph = document.createElement("p");
+            paragraph.innerText = "Alert Message Generated From JavaScript";
+            const parentElement = btn.parentElement.prepend(paragraph);
+        });
+    </script>
+</body>
+</html>
