@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion / Collapsibles</title>
+    <style>
+        .container {
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid black;
+        }
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            width: 100%;
+            padding: 18px;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.5s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 10px 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="accordion-container">
+            <button class="accordion">
+                Topic 1
+            </button>
+            <div class="panel">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores minus et aliquid vel, asperiores sit
+                at aperiam, sunt iste enim quae consequatur dicta necessitatibus unde ipsam accusamus. Sit, saepe
+                nostrum.
+            </div>
+            <button class="accordion">
+                Topic 2
+            </button>
+            <div class="panel">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores minus et aliquid vel, asperiores sit
+                at aperiam, sunt iste enim quae consequatur dicta necessitatibus unde ipsam accusamus. Sit, saepe
+                nostrum.
+            </div>
+            <button class="accordion">
+                Topic 3
+            </button>
+            <div class="panel">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores minus et aliquid vel, asperiores sit
+                at aperiam, sunt iste enim quae consequatur dicta necessitatibus unde ipsam accusamus. Sit, saepe
+                nostrum.
+            </div>
+        </div>
+    </div>
+    <script>
+        var accordion = document.getElementsByClassName("accordion");
+        for (let i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
