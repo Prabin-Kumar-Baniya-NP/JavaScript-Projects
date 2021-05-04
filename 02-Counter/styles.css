@@ -79,7 +79,7 @@ ul {
 a {
   text-decoration: none;
 }
-h1,
+h3,
 h2,
 h3,
 h4 {
@@ -89,7 +89,7 @@ h4 {
   margin-bottom: 0.75rem;
   font-family: var(--ff-primary);
 }
-h1 {
+h3 {
   font-size: 3rem;
 }
 h2 {
@@ -106,7 +106,7 @@ p {
   color: var(--clr-grey-5);
 }
 @media screen and (min-width: 800px) {
-  h1 {
+  h3 {
     font-size: 4rem;
   }
   h2 {
@@ -121,7 +121,7 @@ p {
   body {
     font-size: 1rem;
   }
-  h1,
+  h3,
   h2,
   h3,
   h4 {
