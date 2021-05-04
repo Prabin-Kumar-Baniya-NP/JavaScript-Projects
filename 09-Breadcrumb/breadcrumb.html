@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breadcrumb</title>
+    <style>
+        .breadcrumb-container{
+            border: 1px solid rgb(187, 187, 187);
+            border-radius: 10px;
+            margin: 2px;
+            padding: 2px;
+        }
+        .breadcrumb{
+            display: flex;
+        }
+        .breadcrumb-item::after{
+            content: " /";
+            font-weight: bold;
+            padding-left: 5px;
+        }
+        .breadcrumb-item{
+            margin: 2px;
+            padding-left: 2px;
+        }
+        .breadcrumb-item:hover{
+            color: rgb(117, 31, 31);
+        }
+        .active{
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="breadcrumb-container">
+        <ol class="breadcrumb">
+            <ul class="breadcrumb-item">Home</ul>
+            <ul class="breadcrumb-item">Description</ul>
+            <ul class="breadcrumb-item active">Feed</ul>
+        </ol>
+    </div>
+</body>
+</html>
